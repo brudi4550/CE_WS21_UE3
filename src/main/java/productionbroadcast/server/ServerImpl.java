@@ -111,14 +111,16 @@ public class ServerImpl implements ProductionServer {
         StringBuilder sb = new StringBuilder();
         sb.append("Occupied workstations:\n");
         for (ProductionClient c : clients.keySet()) {
-            sb.append(c.getWorkstation().toString());
-            sb.append(" with status: ");
-            sb.append(c.getStatus());
-            if (c.getStatus() == Status.PRODUCTION) {
-                sb.append(" ProdNr: ");
-                sb.append(clients.get(c));
+            if (c.getWorkstation() != null) {
+                sb.append(c.getWorkstation().toString());
+                sb.append(" with status: ");
+                sb.append(c.getStatus());
+                if (c.getStatus() == Status.PRODUCTION) {
+                    sb.append(" ProdNr: ");
+                    sb.append(clients.get(c));
+                }
+                sb.append("\n");
             }
-            sb.append("\n");
         }
         sb.delete(sb.length()-1, sb.length());
         client.receiveMessage(sb.toString());
