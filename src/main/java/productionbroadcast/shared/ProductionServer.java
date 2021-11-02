@@ -1,7 +1,7 @@
-package uppercasebroadcast.shared;
+package productionbroadcast.shared;
 
-import uppercasebroadcast.Status;
-import uppercasebroadcast.Workstation;
+import productionbroadcast.Status;
+import productionbroadcast.Workstation;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

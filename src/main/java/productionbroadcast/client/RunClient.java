@@ -1,9 +1,10 @@
-package uppercasebroadcast.client;
+package productionbroadcast.client;
 
-import uppercasebroadcast.Status;
-import uppercasebroadcast.Workstation;
-import uppercasebroadcast.shared.ProductionServer;
+import productionbroadcast.Status;
+import productionbroadcast.Workstation;
+import productionbroadcast.shared.ProductionServer;
 
+import java.rmi.ConnectException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.List;
@@ -41,7 +42,12 @@ public class RunClient {
         chooseStation();
         printCommands();
         processInput();
-        server.unregisterClient(client);
+        try {
+            server.unregisterClient(client);
+        } catch (ConnectException e) {
+            System.out.println("Server is already shut down.");
+        }
+
         System.exit(0);
     }
 

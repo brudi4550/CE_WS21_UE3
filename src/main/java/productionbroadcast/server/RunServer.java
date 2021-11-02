@@ -1,6 +1,6 @@
-package uppercasebroadcast.server;
+package productionbroadcast.server;
 
-import uppercasebroadcast.shared.ProductionServer;
+import productionbroadcast.shared.ProductionServer;
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;

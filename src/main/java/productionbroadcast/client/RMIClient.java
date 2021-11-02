@@ -1,9 +1,9 @@
-package uppercasebroadcast.client;
+package productionbroadcast.client;
 
-import uppercasebroadcast.Status;
-import uppercasebroadcast.Workstation;
-import uppercasebroadcast.shared.ProductionClient;
-import uppercasebroadcast.shared.ProductionServer;
+import productionbroadcast.Status;
+import productionbroadcast.Workstation;
+import productionbroadcast.shared.ProductionClient;
+import productionbroadcast.shared.ProductionServer;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -12,8 +12,8 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
-import static uppercasebroadcast.server.RunServer.REGISTRY_PORT;
-import static uppercasebroadcast.server.RunServer.SERVER;
+import static productionbroadcast.server.RunServer.REGISTRY_PORT;
+import static productionbroadcast.server.RunServer.SERVER;
 
 public class RMIClient implements ProductionClient {
     private Status status;

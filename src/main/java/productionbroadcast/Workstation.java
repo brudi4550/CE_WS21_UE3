@@ -1,4 +1,4 @@
-package uppercasebroadcast;
+package productionbroadcast;
 
 public enum Workstation {
     A("Drehmaschine Mazák"),

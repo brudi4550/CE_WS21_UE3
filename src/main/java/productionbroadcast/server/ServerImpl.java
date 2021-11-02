@@ -1,9 +1,9 @@
-package uppercasebroadcast.server;
+package productionbroadcast.server;
 
-import uppercasebroadcast.Status;
-import uppercasebroadcast.Workstation;
-import uppercasebroadcast.shared.ProductionClient;
-import uppercasebroadcast.shared.ProductionServer;
+import productionbroadcast.Status;
+import productionbroadcast.Workstation;
+import productionbroadcast.shared.ProductionClient;
+import productionbroadcast.shared.ProductionServer;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

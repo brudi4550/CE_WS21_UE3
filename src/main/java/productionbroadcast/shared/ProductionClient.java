@@ -1,12 +1,10 @@
-package uppercasebroadcast.shared;
+package productionbroadcast.shared;
 
-import uppercasebroadcast.Status;
-import uppercasebroadcast.Workstation;
+import productionbroadcast.Status;
+import productionbroadcast.Workstation;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.Optional;
-import java.util.Queue;
 
 public interface ProductionClient extends Remote {
     void receiveMessage(String msg) throws RemoteException;
